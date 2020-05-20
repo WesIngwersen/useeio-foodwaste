@@ -44,25 +44,25 @@ Contact Product Lead: Daniel Young (young.daniel@epa.gov
 
 ## Home
 
-See [Wiki/Home](https://github.com/USEPA/SHC_21_4-Data-Science-Tool/wiki).
+See [Wiki/Home](https://github.com/USEPA/useeio-foodwaste/wiki).
 ***
 
-## Build & run
+## Build & Run
 
-See [Wiki/Build & Run](https://github.com/USEPA/SHC_21_4-Data-Science-Tool/wiki/Build-&-Run).
+See [Wiki/Build & Run](https://github.com/USEPA/useeio-foodwaste/wiki/Build-&-Run).
 ***
 
 ## Testing
 
-See [Wiki/Testing](https://github.com/USEPA/SHC_21_4-Data-Science-Tool/wiki/Testing).
+See [Wiki/Testing](https://github.com/USEPA/useeio-foodwaste/wiki/Testing).
 ***
 
 ## Contributing
 
-See [Wiki/Contributing & Collaboration](https://github.com/USEPA/SHC_21_4-Data-Science-Tool/wiki/Contributing).
+See [Wiki/Contributing & Collaboration](https://github.com/USEPA/useeio-foodwaste/wiki/Contributing).
 ***
 
 ## License
 
-See [Wiki/License](https://github.com/USEPA/SHC_21_4-Data-Science-Tool/wiki/Licensing).
+See [Wiki/License](https://github.com/USEPA/useeio-foodwaste/wiki/License).
 ***
