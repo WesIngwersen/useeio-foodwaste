@@ -1,0 +1,17 @@
+# Check Julia version = "version Julia Version 1.4.1 (2020-04-14)."
+
+#---------------------------------------------------------------------------------------#
+# All of these packages appear to be necessary for both Windows and Linux environments. #
+#---------------------------------------------------------------------------------------#
+
+# Install Julia and nteract to run Notebooks
+# Install nteract @ https://nteract.io/
+# Close nteract if open, open, click 'Runtime' ensure Julia listed
+
+# Open Julia enter "]"
+add IJulia.jl            # Backend combined with the Jupyter interactive environment (also used by IPython). 
+# Add Geospatial         # Packages for Julia https://github.com/JuliaGeo check with Jake.
+add GeoDatasets.jl       # Provides access to common geographics datasets.
+add GeoInterface.jl      # A Julia Protocol for Geospatial Data.
+add ODBC.jl              # A Julia library for interacting with the ODBC API for Postgresql.
+add Plots.jl             # Plots is a plotting API and toolset.
