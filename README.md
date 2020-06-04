@@ -4,7 +4,8 @@ SHC_21_4-Data-Science-Tool
 
 ![Data Analysis | Data Science Tools](https://www.epa.gov/sites/production/files/2013-06/epa_seal_verysmall_trim.gif)
 
-EPA developed Julia Lang tool with database using PostgreSQL ODBC.jl drivers with data visualization and plotting using the Plots.jl visualization interface and toolset combinatorial data analysis (CDA) on laboratory results as well as QA/C’d’ existing data.
+EPA developed Django/Python tool with database using PostgreSQL ODBC.jl drivers with data visualization and plotting using 
+visualization interface and toolset combinatorial data analysis (CDA) on laboratory results as well as QA/C’d’ existing data.
 
 ## About
 
