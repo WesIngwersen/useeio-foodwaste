@@ -20,7 +20,6 @@ django-phonenumber-field==4.0.0 # An international phone number field for django
 djangorestframework==3.11.0     # Powerful and flexible toolkit for building Web APIs.
 django-wkhtmltopdf==3.3.0       # Allows a Django site to output dynamic PDFs.
 jupyter==1.0.0                  # Jupyter system, including the notebook, qtconsole, and the IPython kernel.
-pip==20.1.1                     # PyPA recommended tool for installing Python packages.
 psycopg2==2.8.5                 # Python-PostgreSQL Database Adapter.
 pycodestyle==2.6.0              # Python code against some of the style conventions in PEP 8.
 pydocstyle==5.0.2               # Static analysis tool for checking compliance with Python docstring conventions PEP 257.
