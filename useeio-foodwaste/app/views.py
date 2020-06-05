@@ -50,3 +50,17 @@ def about(request):
             'year': datetime.now().year,
         }
     )
+
+
+def jupyter(request):
+    """Renders the jupyter page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'jupyter/jupyter.html',
+        {
+            'title': 'Jupyter',
+            'message': 'Your application description page.',
+            'year': datetime.now().year,
+        }
+    )
