@@ -57,7 +57,7 @@ def jupyter(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'jupyter/jupyter.html',
+        'app/jupyter.html',
         {
             'title': 'Jupyter',
             'message': 'Your application description page.',
