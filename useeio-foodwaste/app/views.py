@@ -60,7 +60,22 @@ def jupyter(request):
         'app/jupyter.html',
         {
             'title': 'Jupyter',
-            'message': 'Your application description page.',
+            'message': 'Jupyter Notebook.',
+            'year': datetime.now().year,
+        }
+    )
+
+
+
+def sdmp(request):
+    """Renders the sdmp page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/sdmp.html',
+        {
+            'title': 'SDMP',
+            'message': 'Scientific Data Management Plan.',
             'year': datetime.now().year,
         }
     )

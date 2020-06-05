@@ -18,6 +18,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('jupyter/', views.jupyter, name='jupyter'),
+    path('sdmp/', views.sdmp, name='sdmp'),
     path('login/',
          LoginView.as_view
          (
