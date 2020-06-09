@@ -11,15 +11,16 @@
 # All of these packages appear to be necessary for both Windows and Linux environments. #
 #---------------------------------------------------------------------------------------#
 
-django-docs==0.3.1              # Allows to serve Sphinx generated docs directly from Django.
-django-filter==2.2.0            # Reusable Django application allows users to filter querysets dynamically.
-django-grappelli==2.14.2        # A jazzy skin for the Django Admin-Interface.
-django-session-security==2.6.6  # Provides a mechanism to logout inactive authenticated users.
-Django==3.0.7                   # Python Modules.
-django-phonenumber-field==4.0.0 # An international phone number field for django models.
-djangorestframework==3.11.0     # Powerful and flexible toolkit for building Web APIs.
-django-wkhtmltopdf==3.3.0       # Allows a Django site to output dynamic PDFs.
-jupyter==1.0.0                  # Jupyter system, including the notebook, qtconsole, and the IPython kernel.
-psycopg2==2.8.5                 # Python-PostgreSQL Database Adapter.
-pycodestyle==2.6.0              # Python code against some of the style conventions in PEP 8.
-pydocstyle==5.0.2               # Static analysis tool for checking compliance with Python docstring conventions PEP 257.
+django-docs>=0.3.1              # Allows to serve Sphinx generated docs directly from Django.
+django-filter>=2.3.0            # Reusable Django application allows users to filter querysets dynamically.
+django-grappelli>=2.14.2        # A jazzy skin for the Django Admin-Interface.
+django-session-security>=2.6.6  # Provides a mechanism to logout inactive authenticated users.
+Django>=3.0.7                   # Python Modules.
+django-phonenumber-field>=4.0.0 # An international phone number field for django models.
+djangorestframework>=3.11.0     # Powerful and flexible toolkit for building Web APIs.
+django-wkhtmltopdf>=3.3.0       # Allows a Django site to output dynamic PDFs.
+jupyter>=1.0.0                  # Jupyter system, including the notebook, qtconsole, and the IPython kernel.
+matplotlib>=3.2.1               # Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
+psycopg2>=2.8.5                 # Python-PostgreSQL Database Adapter.
+pycodestyle>=2.6.0              # Python code against some of the style conventions in PEP 8.
+pydocstyle>=5.0.2               # Static analysis tool for checking compliance with Python docstring conventions PEP 257.

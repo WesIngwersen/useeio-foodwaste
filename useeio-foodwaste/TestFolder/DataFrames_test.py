@@ -21,8 +21,8 @@ using DataFrames
 using CSV
 
 # The big csv takes a while to load/print, so I created one with ~10 lines
-input = ".\\TestFolderJulia\\sampledata.csv"
-input_smaller = ".\\TestFolderJulia\\sampledata_smaller.csv"
+input = ".\\TestFolder\\sampledata.csv"
+input_smaller = ".\\TestFolder\\sampledata_smaller.csv"
 
 df = DataFrame(CSV.File(input_smaller))
 
