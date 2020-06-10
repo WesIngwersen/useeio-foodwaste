@@ -66,7 +66,6 @@ def jupyter(request):
     )
 
 
-
 def sdmp(request):
     """Renders the sdmp page."""
     assert isinstance(request, HttpRequest)

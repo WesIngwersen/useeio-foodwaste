@@ -5,6 +5,6 @@
 
 """Use Jupyter notebook: plot_ensemble_oob.ipynb."""
 
-for i in 1:5
-    print(i, ", ")
- end
+for i in 1: 5
+print(i, ", ")
+end
