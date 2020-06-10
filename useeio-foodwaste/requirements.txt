@@ -24,4 +24,5 @@ matplotlib>=3.2.1               # Matplotlib is a comprehensive library for crea
 psycopg2>=2.8.5                 # Python-PostgreSQL Database Adapter.
 pycodestyle>=2.6.0              # Python code against some of the style conventions in PEP 8.
 pydocstyle>=5.0.2               # Static analysis tool for checking compliance with Python docstring conventions PEP 257.
+scikit_learn>=0.23.1            # scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
 sklearn>=0.0                    # scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
