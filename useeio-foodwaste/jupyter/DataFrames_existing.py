@@ -4,12 +4,9 @@
 # young.daniel@epa.gov
 
 
-"""
-Basic program to view lab results from .csv file.
 
-DataFrames = data in a frame/table or tabular data.
-"""
-
+# Basic program to view lab results from .csv file.
+# DataFrames = data in a frame/table or tabular data.
 first_run = false
 # NOTE: These lines need to be run on the first time only:
 if first_run
