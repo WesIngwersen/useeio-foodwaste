@@ -1,0 +1,78 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+
+<h2><a href="https://intranet.ord.epa.gov/scientific-data-management">Scientific Data Management Plan <u>SDMP</u></a></h2>
+<h3>Data Science Tool</h3>
+<h4><b>Date 0/30/2019</b></h4>
+<h5><i>Research Effort Title: Strategies for the Characterization of Food Waste</i></h5>
+
+<h3>Related Planning Documents</h3>
+ <ol>
+  <li>Strategies for Characterization of Food Waste, QMP, K-LRTD-0032360-QM-1-0</li>
+  <li>Strategies for Characterization of Food Waste, QAPP, Data, K-LRTD-0032360-QP-1-0</li>
+  <li>Strategies for Characterization of Food Waste, QAPP, Sampling and Laboratory Analysis, K-LRTD-0032360-QP-1-0</li>
+</ol>
+
+<h3>Research Effort Team Members</h3>
+<p><a href="mailto:meyer.david@epa.gov">Dr. Michael Gonzalez,</a> <a href="mailto:gonzalez.michael@epa.gov">Dr. David Meyer, </a> and <a href="mailto:young.daniel@epa.gov">Dr. Daniel L. Young, US EPA.</a></p>
+<p> Data Management: ORD OLEM team members will track publicly available existing data for Plastics Projects from articles, abstracts, books, book chapters, computer
+    products, manuals, presentations, proceedings, reports, and scientific data sets. Findings to include attachments will be stored and retrievable in the Strategies
+    for Characterization of Food Waste and Plastics Research database.</p>
+<h5><b><i>Contact US EPA Team Members</i></b></h5>
+ <dl>
+  <dt><a href="mailto:young.daniel@epa.gov">Dr. Daniel L. Young</a></dt>
+  <dd>- SHC.021 Product Lead</dd>
+  <dt><a href="mailto:meyer.david@epa.gov">Dr. David Meyer, US EPA.</a></dt>
+  <dd>- SHC.021 Output Lead</dd>
+  <dt><a href="mailto:gonzalez.michael@epa.gov">Dr. Michael Gonzalez, US EPA.</a></dt>
+  <dd>- Supervisor</dd>
+  <dt><a href="mailto:jones.steven@epa.gov">Mr. Steven Jones</a></dt>
+  <dd>- SDMP Manager</dd>
+  <dt><a href="mailto:hoelle.jill@epa.gov">Ms. Jill Hoelle</a></dt>
+  <dd>- QA Manage</dd>
+</dl>
+<h5><b><i>Software Independent Verification and Validation</i></b></h5>
+<p><a href="mailto:jacob@gqc.com">Mr. Jacob Specht, Global Quality Corporation.</a> Software IV&V: Perform software IV&V on LRTD developed Open Source Software (OSS).
+    Includes a systems engineering process employing rigorous methodologies for evaluating the correctness and quality of the software product throughout the SDLC.
+    Software IV&V is adapted to the characteristics of each project as described in the approved QAPP and/or software planning document.</p>
+
+<h3>Metadata</h3>
+<p><i>Metadata to be included with numerical data records include:</i></p>
+ <ol>
+  <li>description of the time and locations for field data acquisition efforts,</li>
+  <li>unique identifier labels assigned at time of collection and during laboratory analysis,</li>
+  <li>notes that highlight unique aspects for a given sampling location or event that might qualify interpretation of numerical data,</li>
+  <li>descriptors of sample types, matrix and geospatial coordinates, and</li>
+  <li>units of measurement for numerical data.</li>
+</ol>
+<p>The metadata will be incorporated within Excel Workbooks that summarize data collected during each field sampling round in a standardized format developed for
+    the project. The method of incorporating these metadata within the Trip Summary Dataset (Excel Workbook) will include: a) a separate worksheet dedicated to a narrative
+    summary of descriptive metadata for each field sampling event, including filenames and repository for scanned electronic copies of field data sheets and notes, and
+    b) worksheet headings, column headings, and cells within columns/rows organized via worksheet labels based on analysis type and/or data parameter type.</p>
+
+<h3>Laboratory Data Records Requirements</h3>
+<p>Which metadata standard(s) will your research effort team implement? Not relevant for project.</p>
+<p>Glossary and/or Data Dictionary: Not relevant for project.</p>
+<h3>Data Storage</h3>
+<p>Characterize Data: TBD. Size of Data/Rate of Growth: TBD. Planned Length of Data Collection: TBD. Data Storage Location(s): TBD.</p>
+<h3>Access and Collaboration</h3>
+<h4>Access Needs and Permissions</h4>
+
+<p>Research team members will have full access to all data acquired through existing data searches as well as through sampling and analysis results from the Phase 2
+    study. Existing data will be stored in the <a href="https://plasticsprojects.epa.gov/" class="btn btn-primary btn-large">Existing Data Tool &raquo;</a> and the
+    collected data during phase 2 is stored in this tool on the US EPA RTP RHEL servers.</p>
+<h4>External Collaborators and Partners</h4>
+<p>The primary contract support vehicle for this work is completed through the RMEERS contract, Pegasus contractor with sub contractor Global Quality Corporation.</p>
+
+<h5>Collaboration Tools:</h5>
+<a href="https://epalca.atlassian.net/jira/software/projects/JULIA/boards/8" class="btn btn-primary btn-large">Jira Data Science Tool &raquo;</a>
+<a href="https://epalca.atlassian.net/jira/software/projects/DAT/boards/5" class="btn btn-primary btn-large">Jira  Existing Data Tool &raquo;</a>
+<a href="https://github.com/USEPA/FoodWaste" class="btn btn-primary btn-large">US EPA GitHub Existing Data Tool &raquo;</a>
+<a href="https://github.com/USEPA/useeio-foodwaste" class="btn btn-primary btn-large">US EPA GitHub useeio-foodwaste Tool &raquo;</a>
+
+<h3>Organization and Control</h3>
+<p>Jira and US EPA GitHub are the primary tools use for Organization and Control.</p>
+<h4>Monitor and Review</h4>
+<p>SDMP Review Schedule: Bi-Annual by contractor 2020 through 2022.</p>
+{% endblock %}
