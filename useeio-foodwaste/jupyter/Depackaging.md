@@ -10,9 +10,9 @@
 ## EPA Regional Support
 
 * R6 Houston, TX:
-  * LC Miner, Region 6 Lab Houston, TX, 10 Jun 2020. Phone (281) 983-2116 conversation follow-up email attached QAPP.
+  * LC Miner, Region 6 Lab Houston, TX, 10 Jun 2020. (281) 983-2116.
 * R10 Seattle, WA:
-  * Sean Sheldrake, Region 10, Seattle, WA. Contacted via email 11 June 2020.
+  * Sean Sheldrake, Region 10, Seattle, WA. (206) 553-1220.
 * R9 San Francisco, CA:
   * Anna-Marie Cook, ORD-CESER-TSCD (415) 972-3029.
 
