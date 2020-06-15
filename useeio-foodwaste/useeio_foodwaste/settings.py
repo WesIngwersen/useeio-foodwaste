@@ -4,7 +4,7 @@
 # young.daniel@epa.gov
 
 
-"""
+'''
 Django settings for useeio-foodwaste project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
-"""
+'''
 
 import os
 
@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 SITE_NAME = 'https://134.67.216.106/accounts/login'
 
-EMAIL_DISCLAIMER = '<p style="font-weight:bold;color:red">Please do not reply to this email. Thank you.</p>'
+EMAIL_DISCLAIMER = '<p style='font-weight:bold;color:red'>Please do not reply to this email. Thank you.</p>'
 EMAIL_DISCLAIMER_PLAIN = 'Please do not reply to this email. Thank you.'
 BCC_EMAIL = ''
 
@@ -144,12 +144,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'useeio_foodwaste', 'static')
 
-DOWNLOADS_DIR = os.path.join("..", "docs")
+DOWNLOADS_DIR = os.path.join(BASE_DIR, '..', 'docs')
 MANUAL_NAME = 'K-LRTD-0032360-QM-1-0.docx'
 # EXCEL_TOOL = ''
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "useeio_foodwaste/media")
-MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'useeio_foodwaste/media')
+MEDIA_URL = '/media/'
 
 # We keep upload root separate from STATIC and MEDIA to keep it more secure.
 # UPLOAD_ROOT will not be accessible from URL, only by the server views.

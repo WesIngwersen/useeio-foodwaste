@@ -101,8 +101,8 @@ def download_file(request, name):
 
     elif 'xls' in ext:
         with open(file, 'rb') as xls:
-            con_type = """application/vnd.vnd.openxmlformats-officedocument.
-                          spreadsheetml.sheet"""
+            con_type = 'application/vnd.vnd.openxmlformats-officedocument.' + \
+                'spreadsheetml.sheet'
             response = HttpResponse(xls, con_type)
             con_disp = 'attachment; filename="' + name + '"'
             response['Content-Disposition'] = con_disp
