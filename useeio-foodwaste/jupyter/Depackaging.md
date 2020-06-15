@@ -13,6 +13,8 @@
   * LC Miner, Region 6 Lab Houston, TX, 10 Jun 2020. Phone (281) 983-2116 conversation follow-up email attached QAPP.
 * R10 Seattle, WA:
   * Sean Sheldrake, Region 10, Seattle, WA. Contacted via email 11 June 2020.
+* R9 San Francisco, CA:
+ * Anna-Marie Cook, ORD-CESER-TSCD (415) 972-3029.
 
 ### Detection Methods
 
