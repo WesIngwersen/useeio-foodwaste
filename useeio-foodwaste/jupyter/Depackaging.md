@@ -16,11 +16,11 @@
 
 ### Detection Methods
 
-* MP (microplastics analysis) Analysis
-* Fourier Transform Infrared Spectroscopy (FTIR): Center Hill
-* Raman Spectroscopy: Instrument at UC’s Chemistry department
-* Near-Infrared (NIR):
-* Ultraviolet–visible spectroscopy (UV-vis): AWBERC, T&E and Center Hill
+* **MP (microplastics analysis) Analysis**
+  * Fourier Transform Infrared Spectroscopy (FTIR): Center Hill
+  * Raman Spectroscopy: Instrument at UC’s Chemistry department
+  * Near-Infrared (NIR):
+  * Ultraviolet–visible spectroscopy (UV-vis): AWBERC, T&E and Center Hill
 
 ## Characterization and Quantification
 
