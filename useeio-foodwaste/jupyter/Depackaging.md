@@ -2,7 +2,7 @@
 
 ## Sampling Methods
 
-* Locate or Develop EPA method "Sampling Food Waste for Microplastics."
+* Locate or Develop EPA method "**_Sampling Food Waste for Microplastics._**"
   * RMEERS support Task Order.
 * **_Sampling Events_**
   * Two sampling events per site, three sites per location, up to ten sites across continental United States.
@@ -39,6 +39,7 @@ RMEERS contractor will contact and coordinate sites for sampling (Restaurants, R
 * Cincinnati, OH
 * Houston, TX
 * Dallas, TX
+* San Francisco, CA
 * Seattle, WA
 * Ada, OK
 * Miami, OH
