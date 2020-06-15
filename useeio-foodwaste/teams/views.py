@@ -36,8 +36,10 @@ from teams.serializers import TeamSerializer, UserSerializer, \
 
 def is_user_member(user, team=None):
     """
-    Utility method to check if a User is a member of the provided team,
-    or if the User is a member of any Team (when team=None)
+    Utility method.
+    
+    Used to check if a User is a member of the provided team, or if the User is
+    a member of any Team (when team=None).
     """
     if team:
         return TeamMembership.objects.filter(
@@ -46,6 +48,7 @@ def is_user_member(user, team=None):
 
 
 def can_user_edit_team(user, team_id):
+    """Add docstring."""
     membership = TeamMembership.objects.filter(
         team_id=team_id, member_id=user.id).first()
     return membership.can_edit or user.is_superuser
