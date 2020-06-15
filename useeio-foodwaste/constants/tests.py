@@ -19,7 +19,6 @@ from constants.utils import split_email_list, is_epa_email, non_epa_email_messag
     create_qt_email_message, xstr, sort_rap_numbers, get_rap_fields, is_float
 
 
-
 class TestUtils(TestCase):
     """Test utils."""
 
