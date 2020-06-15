@@ -1,4 +1,4 @@
-# DataFrames_usepa.py (LabAnalysisRMEERS)
+# lab_data.py (jupyter)
 # !/usr/bin/env python3
 # coding=utf-8
 # young.daniel@epa.gov
@@ -11,14 +11,14 @@ DataFrames = data in a frame/table or tabular data.
 
 first_run = false
 # NOTE: These lines need to be run on the first time only:
-if first_run
-    using Pkg
-    Pkg.add("DataFrames")
-    Pkg.add("CSV")
-end
+# if first_run
+#    using Pkg
+#    Pkg.add("DataFrames")
+#    Pkg.add("CSV")
+#end
 
-using DataFrames
-using CSV
+# using DataFrames
+# using CSV
 
 # The big csv takes a while to load/print, so I created one with ~10 lines
 input = ".\\TestFolderJulia\\sampledata.csv"
