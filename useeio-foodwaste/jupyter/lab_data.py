@@ -4,31 +4,26 @@
 # young.daniel@epa.gov
 
 """
-Basic program to view lab results from .csv file.
+Module to view lab results and site locations from .csv file.
 
-DataFrames = data in a frame/table or tabular data.
+Available functions:
+- DataFrames = data in a frame/table or tabular data.
+- Construct "geo map functions" using "Shapefiles" for site sampling locations.
 """
 
-first_run = false
-# NOTE: These lines need to be run on the first time only:
-# if first_run
-#    using Pkg
-#    Pkg.add("DataFrames")
-#    Pkg.add("CSV")
-#end
+# https://towardsdatascience.com/mapping-geograph-data-in-python-610a963d2d7f
+# Create test in Jupyter Notebook
+# In VS Code download extension "geo-data-viewer"
 
-# using DataFrames
-# using CSV
+import numpy as np
+import pandas as pd
+import shapefile as shp
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# The big csv takes a while to load/print, so I created one with ~10 lines
-input = ".\\TestFolderJulia\\sampledata.csv"
-input_smaller = ".\\TestFolderJulia\\sampledata_smaller.csv"
+sns.set(style=”whitegrid”, palette=”pastel”, color_codes=True)
+sns.mpl.rc(“figure”, figsize=(10,6))
 
-df = DataFrame(CSV.File(input_smaller))
+%matplotlib inline
 
-# describe(df)
-print(df)
-
-# For all users
-# New variable: JULIA_HOME C:\Users\Daniel L. Young PhD\AppData\Local\Programs\Julia\Julia-1.4.1\bin
-# Edit existing path: Add new path entry: %JULIA_HOME%
+# Jake, need assistance 'Opening a Vector Map' for Cincinnati, OH.
