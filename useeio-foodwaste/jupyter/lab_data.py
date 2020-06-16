@@ -27,3 +27,9 @@ sns.mpl.rc(“figure”, figsize=(10,6))
 %matplotlib inline
 
 # Jake, need assistance 'Opening a Vector Map' for Cincinnati, OH.
+# https://catalog.data.gov/dataset/tiger-line-shapefile-2016-state-ohio-current-county-subdivision-state-based
+shp_path = “./jupyter/Vector Maps/tl_2016_39_cousub.shp”
+sf = shp.Reader(shp_path)
+
+len(sf.shapes())
+
