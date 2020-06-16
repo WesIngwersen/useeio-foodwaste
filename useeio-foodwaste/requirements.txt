@@ -27,4 +27,5 @@ pydocstyle>=5.0.2               # Static analysis tool for checking compliance w
 pyshp>=2.1.0                    # Shapefile Library (PyShp) reads and writes ESRI Shapefiles in pure Python.
                                 # Used for Jupyter Notebook https://towardsdatascience.com/mapping-geograph-data-in-python-610a963d2d7f
 scikit_learn>=0.23.1            # scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
+seaborn>=0.10.1                 # Python data visualization library based on matplotlib.
 sklearn>=0.0                    # scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
