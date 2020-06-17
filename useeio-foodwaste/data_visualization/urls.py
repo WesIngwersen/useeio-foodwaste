@@ -16,4 +16,5 @@ from data_visualization import views
 
 urlpatterns = [
     url(r'^$', views.index, name='data_visualization'),
+    url(r'^map/?$', views.generate_map, name='generate_map'),
 ]

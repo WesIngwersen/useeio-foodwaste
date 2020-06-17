@@ -36,6 +36,14 @@ def index(request, *args, **kwargs):
 
 
 @login_required
+def generate_map(request, *args, **kwargs):
+    """
+    Receives a POST from the main page of this module.
+    Generates a map for the provided State and Datum (shp column header).
+    """
+
+
+@login_required
 def ohio_map(request, *args, **kwargs):
     """Generate and return a matplotlib map of Ohio."""
     # 3. Initialize visualization set:
