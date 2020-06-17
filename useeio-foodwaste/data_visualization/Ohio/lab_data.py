@@ -129,7 +129,10 @@ def plot_map_fill_multiples_ids_tone(sf, title, cities, print_id, color_ton, bin
         # Get the corresponding index of city with id:
         index = cities.index(id)
         try:
-            ax.fill(x_lon,y_lat, color_ton[index])
+            ax.fill(x_lon, y_lat, color_ton[index])
+            if color_ton[index] == '#FFFFFF':
+                print(f'{id}, {color_ton[index]}')
+                print('White!')
         except:
             print("Out of range!")
             pass
@@ -153,4 +156,4 @@ title = 'AWATER in Ohio by County Subdivision'
 data = df.AWATER
 names = df.NAME
 
-plot_cities_data(sf, title, names, data, 4, True)
+plot_cities_data(sf, title, names, data, 4, False)
