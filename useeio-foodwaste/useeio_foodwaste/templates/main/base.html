@@ -101,6 +101,9 @@
                 <!-- navbar when user is logged in -->
                 {% if user.is_authenticated %}
                 <li class="menu-item" role="presentation">
+                    <a href="{% url 'data_visualization' %}" class="menu-link" role="menuitem">Data Visualization</a>
+                </li>
+                <li class="menu-item" role="presentation">
                     <a href="{% url 'jupyter' %}" class="menu-link" role="menuitem">Jupyter</a>
                 </li>
                 <li class="menu-item" role="presentation">

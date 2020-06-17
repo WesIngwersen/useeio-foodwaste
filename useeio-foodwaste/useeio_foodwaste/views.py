@@ -7,8 +7,9 @@
 """Definition of views."""
 
 from datetime import datetime
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest
+from django.shortcuts import render
 
 
 def home(request):
@@ -52,6 +53,7 @@ def about(request):
     )
 
 
+@login_required
 def jupyter(request):
     """Renders the jupyter page."""
     assert isinstance(request, HttpRequest)
@@ -66,6 +68,7 @@ def jupyter(request):
     )
 
 
+@login_required
 def sdmp(request):
     """Renders the sdmp page."""
     assert isinstance(request, HttpRequest)

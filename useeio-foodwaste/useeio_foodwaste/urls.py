@@ -25,6 +25,7 @@ urlpatterns = [
 
     # Begin other module import URLs.
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^data_visualization/', include('data_visualization.urls')),
     url(r'^support/', include('support.urls')),
     url(r'^teams/', include('teams.urls')),
 ]
