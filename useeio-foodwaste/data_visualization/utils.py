@@ -55,8 +55,16 @@ def calc_color(data, color=None):
                         '#fe9929','#d95f0e','#993404']
             colors = 'YlOrBr'
 
-        new_data, bins = pd.qcut(data, 6, retbins=True,
-        labels=list(range(6)))
+        # NOTE: Illinois had an issue with duplicate bins. We tried solving with
+        # kwarg duplicate='raise' and duplicate='drop', but neither worked.
+        # Another solution is to rank the data (in the except clause), as suggested:
+        # https://stackoverflow.com/questions/20158597/how-to-qcut-with-non-unique-bin-edges/40548606#40548606
+        try:
+            new_data, bins = pd.qcut(data, 6, retbins=True, labels=list(range(6)))
+        except:
+            new_data, bins = pd.qcut(data.rank(method='first'), 6,
+                                     retbins=True, labels=list(range(6)))
+
         color_ton = []
         for val in new_data:
             color_ton.append(color_sq[val])
