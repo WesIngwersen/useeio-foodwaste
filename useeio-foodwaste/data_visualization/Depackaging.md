@@ -43,3 +43,5 @@ RMEERS contractor will contact and coordinate sites for sampling (Restaurants, R
     - Rhode Island
     - Texas
     - Washington
+    - Oklahoma
+    - North Carolina
