@@ -54,15 +54,15 @@ def about(request):
 
 
 @login_required
-def jupyter(request):
-    """Renders the jupyter page."""
+def lab_data(request):
+    """Renders the lab_data page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'jupyter.html',
+        'lab_data.html',
         {
-            'title': 'Jupyter',
-            'message': 'Jupyter Notebook.',
+            'title': 'Lab Data',
+            'message': 'Lab Data.',
             'year': datetime.now().year,
         }
     )

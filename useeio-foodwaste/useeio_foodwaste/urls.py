@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^dashboard/?$', views.home, name='dashboard'),
     url(r'^contact/?$', views.contact, name='contact'),
     url(r'^about/?$', views.about, name='about'),
-    url(r'^jupyter/?$', views.jupyter, name='jupyter'),
+    url(r'^lab_data/?$', views.lab_data, name='lab_data'),
     url(r'^sdmp/?$', views.sdmp, name='sdmp'),
 
     # Begin other module import URLs.

@@ -12,7 +12,6 @@ Available functions:
 """
 
 # https://towardsdatascience.com/mapping-geograph-data-in-python-610a963d2d7f
-# Create test in Jupyter Notebook
 # In VS Code download extension "geo-data-viewer"
 
 import numpy as np
