@@ -34,7 +34,7 @@
 
 RMEERS contractor will contact and coordinate sites for sampling (Restaurants, Residential, Commercial, Business).
 
-#### Possible Sampling Sites
+#### Potential Sampling Sites
 
     - Ohio
     - California
