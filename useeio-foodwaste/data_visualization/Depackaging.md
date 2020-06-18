@@ -34,14 +34,12 @@
 
 RMEERS contractor will contact and coordinate sites for sampling (Restaurants, Residential, Commercial, Business).
 
-#### Possible Sampling Sites
+#### Potential Sampling Sites
 
-* Cincinnati, OH
-* Houston, TX
-* Dallas, TX
-* San Francisco, CA
-* Seattle, WA
-* Ada, OK
-* Miami, OH
-* Gainesville, FL
-* Rhode Island
+    - Ohio
+    - California
+    - Florida
+    - Illinois
+    - Rhode Island
+    - Texas
+    - Washington
