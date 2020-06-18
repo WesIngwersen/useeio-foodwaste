@@ -147,7 +147,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'useeio_foodwaste', 'static')
 
 DOWNLOADS_DIR = os.path.join(BASE_DIR, '..', 'docs')
 MANUAL_NAME = 'K-LRTD-0032360-QM-1-0.docx'
-# EXCEL_TOOL = ''
+
+SHAPE_FILE_DIR = os.path.join(BASE_DIR, 'data_visualization', 'resources')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'useeio_foodwaste/media')
 MEDIA_URL = '/media/'

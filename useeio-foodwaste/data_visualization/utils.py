@@ -12,10 +12,7 @@ Available functions:
 """
 
 
-import numpy as np
 import pandas as pd
-import shapefile as shp
-import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 5. Converting shapefile data on Pandas dataframe
@@ -71,59 +68,3 @@ def calc_color(data, color=None):
                        " => "+str(int(bins[i+1])-1), end =" ")
             print("\n\n   1   2   3   4   5   6")
         return color_ton, bins
-
-
-def plot_cities_data(sf, title, cities, data=None, color=None, print_id=False):
-    """Plot map with selected cities, using specific color"""
-
-    color_ton, bins = calc_color(data, color)
-    df = read_shapefile(sf)
-    city_ids = []
-    for i in cities:
-        indices = df[df.NAME == i].index
-        if indices.any():
-            id = indices[0]
-            city_ids.append(id)
-            # for id in indices:
-            #     city_ids.append(id)
-
-    plot_map_fill_multiples_ids_tone(sf, title, city_ids, print_id, color_ton, bins,
-                                     x_lim = None, y_lim = None, figsize = (11,9))
-
-
-def plot_map_fill_multiples_ids_tone(sf, title, cities, print_id, color_ton, bins,
-                                     x_lim = None, y_lim = None, figsize = (11,9)):
-    """Plot map with lim coordinates"""
-
-    plt.figure(figsize = figsize)
-    fig, ax = plt.subplots(figsize = figsize)
-    fig.suptitle(title, fontsize=16)
-    for shape in sf.shapeRecords():
-        x = [i[0] for i in shape.shape.points[:]]
-        y = [i[1] for i in shape.shape.points[:]]
-        ax.plot(x, y, 'k')
-
-    for id in cities:
-        shape_ex = sf.shape(id)
-        x_lon = np.zeros((len(shape_ex.points),1))
-        y_lat = np.zeros((len(shape_ex.points),1))
-        for ip in range(len(shape_ex.points)):
-            x_lon[ip] = shape_ex.points[ip][0]
-            y_lat[ip] = shape_ex.points[ip][1]
-        # Get the corresponding index of city with id:
-        index = cities.index(id)
-        try:
-            ax.fill(x_lon, y_lat, color_ton[index])
-            if color_ton[index] == '#FFFFFF':
-                print(f'{id}, {color_ton[index]}')
-                print('White!')
-        except:
-            print("Out of range!")
-            pass
-        if print_id != False:
-            x0 = np.mean(x_lon)
-            y0 = np.mean(y_lat)
-            plt.text(x0, y0, id, fontsize=10)
-    if (x_lim != None) & (y_lim != None):
-        plt.xlim(x_lim)
-        plt.ylim(y_lim)
