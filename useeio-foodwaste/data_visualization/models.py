@@ -10,6 +10,6 @@ Models related to data_visualization.
 Available functions:
 """
 
-AVAILABLE_STATES = ['Ohio', 'California', 'Illinois', 'North Carolina',
-                    'Oklahoma', 'Texas', 'Washington']
+AVAILABLE_STATES = ['Ohio', 'California', 'Florida', 'Illinois', 'North Carolina',
+                    'Oklahoma', 'Rhode Island', 'Texas', 'Washington']
 AVAILABLE_DATA = ['AWATER', 'ALAND']

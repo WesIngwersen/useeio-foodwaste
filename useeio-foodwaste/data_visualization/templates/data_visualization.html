@@ -10,12 +10,12 @@
         {% csrf_token %}
         <select class="col-sm-5 form-control m-2" id="stateSelect" name="stateSelect">
             {% for state in states %}
-            <option value="{{state}}">{{state}}</option>
+            <option value="{{state}}" {% if sel_state and state == sel_state %} selected {% endif %}>{{state}}</option>
             {% endfor %}
         </select>
         <select class="col-sm-5 form-control m-2" id="datumSelect" name="datumSelect">
             {% for col in columns %}
-            <option value="{{col}}">{{col}}</option>
+            <option value="{{col}}" {% if sel_datum and col == sel_datum %} selected {% endif %}>{{col}}</option>
             {% endfor %}
         </select>
         <button class="btn btn-md btn-success m-2" type="submit" value="submit" id="submitButton">
@@ -23,6 +23,7 @@
         </button>
     </form>
 </div>
+<div class="row" id="loadingNote"></div>
 {% if map %}
 <div class="row">
     <div class="col-md-12">
@@ -41,6 +42,7 @@
     $(document).ready(function(){
         $('#dataVisualizationForm').on('submit', function(e){
             $('#submitButton').html(loadingHtml);
+            $('#loadingNote').html('Please note that states with larger populations have longer loading times...')
         });
     });
 </script>
