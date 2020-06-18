@@ -8,5 +8,6 @@ Once all existing laboratory data and .csv files have been imported, develop use
 
 The basic tool will be set up using a django/python web app with postgres database and the lab results stored in this folder from an existing data search using the food waste data search tool on EPA web server RTP RHEL (VM937).
 
-# sklearn.ensemble.RandomForestClassifier @ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
-# sklearn.datasets.make_classification @ https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html
+sklearn.ensemble.RandomForestClassifier @ <https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html>
+
+sklearn.datasets.make_classification @ <https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html>
