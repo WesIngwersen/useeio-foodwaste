@@ -34,9 +34,11 @@ from useeio_foodwaste.settings import SHAPE_FILE_DIR
 @login_required
 def index(request, *args, **kwargs):
     """
-    Main page for the Data Visualization module. On this page, users should be
-    able to select a US State (perhaps a subset of a state), select a parameter (or
-    potentially multiple parameters), and generate maps of the selected parameters.
+    Main page for the Data Visualization module.
+    
+    On this page, users should be able to select a US State (perhaps a subset of
+    a state), select a parameter (or potentially multiple parameters), and
+    generate maps of the selected parameters.
     """
     assert isinstance(request, HttpRequest)
 
@@ -105,7 +107,7 @@ def generate_map(state, datum):
 
 
 def plot_cities_data(sf, title, cities, data=None, color=None, print_id=False):
-    """Plot map with selected cities, using specific color"""
+    """Plot map with selected cities, using specific color."""
     color_ton, bins = calc_color(data, color)
     df = read_shapefile(sf)
     city_ids = []
