@@ -4,7 +4,7 @@
 # young.daniel@epa.gov
 
 
-'''
+"""
 Django settings for useeio-foodwaste project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
-'''
+"""
 
 import os
 

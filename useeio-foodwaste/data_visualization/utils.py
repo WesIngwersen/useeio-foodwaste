@@ -18,8 +18,10 @@ import seaborn as sns
 # 5. Converting shapefile data on Pandas dataframe
 def read_shapefile(sf):
     """
-    Read a shapefile into a Pandas dataframe with a 'coords' column
-    holding the geometry information. This uses the pyshp package
+    Read a shapefile.
+    
+    Into a Pandas dataframe with a 'coords' column holding the geometry
+    information. This uses the pyshp package.
     """
     fields = [x[0] for x in sf.fields][1:]
     records = sf.records()
