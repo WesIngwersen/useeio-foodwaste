@@ -23,6 +23,10 @@ def read_shapefile(sf):
     """
     fields = [x[0] for x in sf.fields][1:]
     records = sf.records()
+    shps = []
+    for s in sf.shapes():
+        pts = s.points
+        shps.append(pts)
     shps = [s.points for s in sf.shapes()]
     df = pd.DataFrame(columns=fields, data=records)
     df = df.assign(coords=shps)

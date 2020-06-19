@@ -78,11 +78,11 @@ def generate_map(state, datum):
     # Get the names (subdivisions) and data to be mapped.
     names = df.NAME
     if datum == 'AWATER':
-        title = f'AWATER in {state} by County Subdivision'
+        title = f'AWATER in {state}'
         data = df.AWATER
         color_num = 2
     else:
-        title = f'ALAND in {state} by County Subdivision'
+        title = f'ALAND in {state}'
         data = df.ALAND
         color_num = 4
 
@@ -91,7 +91,9 @@ def generate_map(state, datum):
     sns.mpl.rc("figure", figsize=(10,6))
 
     # Plot the data
-    t_plt = plot_cities_data(sf, title, names, data, color_num, False)
+    if state.endswith('States'):
+        excl_ids = [2, 15, '02', '15']
+    t_plt = plot_cities_data(sf, title, names, data, color_num, False, excl_ids=excl_ids)
 
     # Render the map into memory
     fig = t_plt.gcf()
@@ -104,7 +106,8 @@ def generate_map(state, datum):
     return parse.quote(string)
 
 
-def plot_cities_data(sf, title, cities, data=None, color=None, print_id=False):
+def plot_cities_data(sf, title, cities, data=None, color=None,
+                     print_id=False, excl_ids=None):
     """Plot map with selected cities, using specific color"""
     color_ton, bins = calc_color(data, color)
     df = read_shapefile(sf)
@@ -113,49 +116,61 @@ def plot_cities_data(sf, title, cities, data=None, color=None, print_id=False):
         indices = df[df.NAME == i].index
         if indices.any():
             id = indices[0]
-            city_ids.append(id)
-            # for id in indices:
-            #     city_ids.append(id)
+            # Use the cont_us boolean and state id's to exclude non-continental US.
+            # Greater than 56 are islands/territories. Alaska and Hawaii are 15 and 02
+            if not excl_ids or (excl_ids and id not in excl_ids):
+                city_ids.append(id)
+            else:
+                print('skip this one...')
 
     return plot_map_fill_multiples_ids_tone(
         sf, title, city_ids, print_id, color_ton, bins,
-        x_lim = None, y_lim = None, figsize = (11,9))
+        x_lim=None, y_lim=None, figsize=(11,9), excl_ids=excl_ids)
 
 
 def plot_map_fill_multiples_ids_tone(sf, title, cities, print_id, color_ton, bins,
-                                     x_lim = None, y_lim = None, figsize = (11,9)):
+                                     x_lim=None, y_lim=None, figsize=(11,9),
+                                     excl_ids=None):
     """Plot map with lim coordinates"""
 
-    plt.figure(figsize = figsize)
+    plt.figure(figsize=figsize)
     fig, ax = plt.subplots(figsize = figsize)
     fig.suptitle(title, fontsize=16)
     for shape in sf.shapeRecords():
-        x = [i[0] for i in shape.shape.points[:]]
-        y = [i[1] for i in shape.shape.points[:]]
-        ax.plot(x, y, 'k')
+        if not excl_ids or (excl_ids and shape.record.GEOID not in excl_ids):
+            x = [i[0] for i in shape.shape.points[:]]
+            y = [i[1] for i in shape.shape.points[:]]
+            ax.plot(x, y, 'k')
+        else:
+            print('..........')
 
     for id in cities:
-        shape_ex = sf.shape(id)
-        x_lon = np.zeros((len(shape_ex.points),1))
-        y_lat = np.zeros((len(shape_ex.points),1))
-        for ip in range(len(shape_ex.points)):
-            x_lon[ip] = shape_ex.points[ip][0]
-            y_lat[ip] = shape_ex.points[ip][1]
-        # Get the corresponding index of city with id:
-        index = cities.index(id)
-        try:
-            ax.fill(x_lon, y_lat, color_ton[index])
-            if color_ton[index] == '#FFFFFF':
-                print(f'{id}, {color_ton[index]}')
-                print('White!')
-        except:
-            print("Out of range!")
-            pass
-        if print_id != False:
-            x0 = np.mean(x_lon)
-            y0 = np.mean(y_lat)
-            plt.text(x0, y0, id, fontsize=10)
+        if not excl_ids or (excl_ids and id not in excl_ids):
+            shape_ex = sf.shape(id)
+            x_lon = np.zeros((len(shape_ex.points),1))
+            y_lat = np.zeros((len(shape_ex.points),1))
+            for ip in range(len(shape_ex.points)):
+                x_lon[ip] = shape_ex.points[ip][0]
+                y_lat[ip] = shape_ex.points[ip][1]
+            # Get the corresponding index of city with id:
+            index = cities.index(id)
+            try:
+                ax.fill(x_lon, y_lat, color_ton[index])
+                if color_ton[index] == '#FFFFFF':
+                    print(f'{id}, {color_ton[index]}')
+                    print('White!')
+            except:
+                print("Out of range!")
+                pass
+            if print_id != False:
+                x0 = np.mean(x_lon)
+                y0 = np.mean(y_lat)
+                plt.text(x0, y0, id, fontsize=10)
+        else:
+            print('..........')
+
     if (x_lim != None) & (y_lim != None):
         plt.xlim(x_lim)
         plt.ylim(y_lim)
+
     return plt

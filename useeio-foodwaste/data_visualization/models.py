@@ -11,5 +11,6 @@ Available functions:
 """
 
 AVAILABLE_STATES = ['Ohio', 'California', 'Florida', 'Illinois', 'North Carolina',
-                    'Oklahoma', 'Rhode Island', 'Texas', 'Washington']
+                    'Oklahoma', 'Rhode Island', 'Texas', 'Washington',
+                    'Continental United States']
 AVAILABLE_DATA = ['AWATER', 'ALAND']
